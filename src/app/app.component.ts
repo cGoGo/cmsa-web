@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SLIDES } from './data';
+import { SLIDES, TEXTS } from './data';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,5 @@ import { SLIDES } from './data';
 })
 export class AppComponent {
   public slides = SLIDES;
+  public texts = TEXTS;
 }

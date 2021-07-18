@@ -21,13 +21,29 @@
   font-style: normal;
 }
 
+$primary: #96D06B;
+$secondary: #46C1ED;
+$secondary-ligther: #9EDBF1;
 $medium: #8C9089;
-$background-light: #F8FBF6;
+$dark: #152807;
+$light: #F8FBF6;
 $font-regular: 'Font regular';
 $font-semibold: 'Font semibold';
 $font-bold: 'Font bold';
 
-.body { background-color: $background-light; }
+body, h1, h2, h3, p { margin: 0; }
+
+// Utils
+.inner-icon {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.body {
+  color: $dark;
+  background-color: $light;
+}
 
 // Bootstrap
 .carousel-indicators li {
@@ -36,17 +52,106 @@ $font-bold: 'Font bold';
 
 // Texts
 .title {
-  font: 48px $font-regular;
+  font: 48px $font-bold;
+}
+.subtitle {
+  font: 32px $font-semibold;
+}
+.text {
+  font: 24px $font-regular;
+  line-height: 140%;
+}
+.tiny {
+  font: 18px $font-regular;
+  line-height: 120%;
 }
 
 .header {
   background: linear-gradient(177.95deg, rgba(150, 208, 107, 0.2) 1.84%, rgba(150, 208, 107, 0.145313) 53.11%, rgba(248, 251, 246, 0.06) 98.41%);
+  .inner-slide {
+    height: 60vh;
+    min-height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
 }
 
-.inner-slide {
-  height: 60vh;
-  min-height: 400px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
+.container {
+  margin: 8% auto;
+  .title {
+    margin-bottom: 4%;
+    text-align: center;
+  }
+  .main-card {
+    padding: 4% 6%;
+    display: flex;
+    background: white;
+    align-items: center;  
+    border-radius: 12px;
+    box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.08);
+    .icon { margin-left: 4%; }
+  }
 }
+
+.therapies {
+  display: flex;
+  .description-section {
+    width: 55%;
+    .icon-bar {
+      padding: 0 4%;
+      display: flex;
+      margin-top: 32px;
+      align-items: center;
+      justify-content: space-evenly;
+      border-top: 2px solid $secondary-ligther;
+      .bullet {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin-top: -32px;
+        border-radius: 50%;
+        background-color: $secondary-ligther;
+        &.full {
+          width: 64px;
+          height: 64px;
+          max-width: 64px;
+          cursor: initial;
+          background-size: 44px;
+          background-color: $secondary;
+          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+        }
+      }
+    }
+    .subtitle { margin-top: 4%; }
+    .description {
+      height: 20vh;
+      display: flex;
+      padding: 0 6%;
+      color: $medium;
+      text-align: right;
+      align-items: center;
+    }
+  }
+  .image-section {
+    width: 45%;
+    min-height: 100%;
+    border-radius: 24px;
+    box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.icon {
+  &.basic {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+}
+
+// Icons
+.dark-chevron-right { @extend .inner-icon; background-image: url('./assets/icons/dark-chevron-right.svg'); }
+.white-chinese-med { @extend .inner-icon; background-image: url('./assets/icons/white-chinese-med.svg'); }
+.white-orthomolecular { @extend .inner-icon; background-image: url('./assets/icons/white-orthomolecular.svg'); }
+
+//homotoxicology
