@@ -1,4 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: 'Font regular';
+  src: url('../src/assets/fonts/Baloo2-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Font semibold';
+  src: url('../src/assets/fonts/Baloo2-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Font bold';
+  src: url('../src/assets/fonts/Baloo2-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$medium: #8C9089;
+$background-light: #F8FBF6;
+$font-regular: 'Font regular';
+$font-semibold: 'Font semibold';
+$font-bold: 'Font bold';
+
+.body { background-color: $background-light; }
+
+// Bootstrap
+.carousel-indicators li {
+  background-color:$medium;
+}
+
+// Texts
+.title {
+  font: 48px $font-regular;
+}
+
+.header {
+  background: linear-gradient(177.95deg, rgba(150, 208, 107, 0.2) 1.84%, rgba(150, 208, 107, 0.145313) 53.11%, rgba(248, 251, 246, 0.06) 98.41%);
+}
+
+.inner-slide {
+  height: 60vh;
+  min-height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
