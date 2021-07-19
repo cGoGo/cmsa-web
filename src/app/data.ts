@@ -11,6 +11,11 @@ export const TEXTS = {
   },
   CONSULTATION_DESCRIPTION: 'Para realizar un tratamiento de Medicina Integrativa, es necesario realizar una Consulta Médica previa que incluye un Escáner Biocuántico.',
   BUTTONS: {
-    CONTACT: 'Contactar'
+    CONTACT: 'Contactar',
+    KNOW_MORE: 'Saber más'
+  },
+  PSYCHOLOGY: {
+    TITLE: 'Psicología',
+    DESCRIPTION: 'Fundadora y directora del Centro Médico Ser Alma, Médico Cirujano General, Médico Tibetana y Acupunturista. Ozonoterapeuta, Médico Biorregulador y Médico Ortomolecular. Con amplio conociemiento de la medicina Integrativa.'
   }
 }

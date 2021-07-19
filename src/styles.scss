@@ -33,22 +33,22 @@ $font-bold: 'Font bold';
 
 body, h1, h2, h3, p { margin: 0; }
 
+.body {
+  color: $dark;
+  background-color: $light;
+}
+
 // Utils
 .inner-icon {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.body {
-  color: $dark;
-  background-color: $light;
-}
+.background-up {   background: linear-gradient(177.95deg, rgba(150, 208, 107, 0.2) 1.84%, rgba(150, 208, 107, 0.145313) 53.11%, rgba(248, 251, 246, 0.06) 98.41%); }
+.background-down { background: linear-gradient(359.43deg, rgba(150, 208, 107, 0.2) 0.48%, rgba(150, 208, 107, 0.145313) 53.04%, rgba(248, 251, 246, 0.06) 99.49%); }
 
 // Bootstrap
-.carousel-indicators li {
-  background-color:$medium;
-}
+.carousel-indicators li { background-color:$medium; }
 
 // Texts
 .title {
@@ -76,14 +76,23 @@ body, h1, h2, h3, p { margin: 0; }
   font: 32px $font-semibold;
   background-color: $primary;
 }
-
-.bamboo-1 {
-  background-size: auto;
-  background-position: -40px 120%;
+.secondary-button {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  max-width: 180px;
+  color: $secondary;
+  align-items: center;
+  border-radius: 12px;
+  font: 24px $font-regular;
+  background-color: white;
+  border: 2px solid $secondary;
+  justify-content: space-evenly;
 }
 
+// Layout
 .header {
-  background: linear-gradient(177.95deg, rgba(150, 208, 107, 0.2) 1.84%, rgba(150, 208, 107, 0.145313) 53.11%, rgba(248, 251, 246, 0.06) 98.41%);
+  @extend .background-up;
   .inner-slide {
     height: 60vh;
     min-height: 400px;
@@ -94,7 +103,7 @@ body, h1, h2, h3, p { margin: 0; }
 }
 
 .container {
-  margin: 8% auto;
+  padding: 4% 0;
   .title {
     margin-bottom: 4%;
     text-align: center;
@@ -161,6 +170,29 @@ body, h1, h2, h3, p { margin: 0; }
   }
 }
 
+.button-container {
+  width: 100%;
+  display: flex;
+  .btn { margin: auto; }
+}
+
+.psychology-section {
+  display: flex;
+  .main-card {
+    width: 45%;
+  }
+  .info-container {
+    width: 55%;
+    display: flex;
+    padding: 2% 4%;
+    min-height: 400px;
+    flex-direction: column;
+    justify-content: space-between;
+    .btn { align-self: flex-end; }
+  }
+}
+
+// Icons styles
 .icon {
   &.basic {
     width: 24px;
@@ -174,9 +206,20 @@ body, h1, h2, h3, p { margin: 0; }
   }
 }
 
+// Bamboo
+.bamboo-1 {
+  background-size: auto;
+  background-position: -40px 90%;
+}
+.bamboo-2 {
+  background-size: auto;
+  background-position: 105% top;
+}
+
 // Icons
-.primary-stethoscope { @extend .inner-icon; background-image: url('./assets/icons/primary-stethoscope.svg'); }
 .dark-chevron-right { @extend .inner-icon; background-image: url('./assets/icons/dark-chevron-right.svg'); }
+.primary-stethoscope { @extend .inner-icon; background-image: url('./assets/icons/primary-stethoscope.svg'); }
+.secondary-chevron-right { @extend .inner-icon; background-image: url('./assets/icons/secondary-chevron-right.svg'); }
 .white-chinese-med { @extend .inner-icon; background-image: url('./assets/icons/white-chinese-med.svg'); }
 .white-orthomolecular { @extend .inner-icon; background-image: url('./assets/icons/white-orthomolecular.svg'); }
 
@@ -184,3 +227,4 @@ body, h1, h2, h3, p { margin: 0; }
 
 // Images
 .bamboo-1 { @extend .inner-icon; background-image: url('./assets/img/bamboo-1.svg'); }
+.bamboo-2 { @extend .inner-icon; background-image: url('./assets/img/bamboo-2.svg'); }
