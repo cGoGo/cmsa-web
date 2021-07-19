@@ -66,6 +66,22 @@ body, h1, h2, h3, p { margin: 0; }
   line-height: 120%;
 }
 
+// Buttons
+.main-button {
+  width: 100%;
+  height: 72px;
+  color: $dark;
+  max-width: 372px;
+  border-radius: 12px;
+  font: 32px $font-semibold;
+  background-color: $primary;
+}
+
+.bamboo-1 {
+  background-size: auto;
+  background-position: -40px 120%;
+}
+
 .header {
   background: linear-gradient(177.95deg, rgba(150, 208, 107, 0.2) 1.84%, rgba(150, 208, 107, 0.145313) 53.11%, rgba(248, 251, 246, 0.06) 98.41%);
   .inner-slide {
@@ -90,7 +106,11 @@ body, h1, h2, h3, p { margin: 0; }
     align-items: center;  
     border-radius: 12px;
     box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.08);
-    .icon { margin-left: 4%; }
+    .next { margin-left: 4%; }
+    &.consultation-section {
+      margin-top: 6%;
+      .info { margin-right: 2%; }
+    }
   }
 }
 
@@ -123,7 +143,7 @@ body, h1, h2, h3, p { margin: 0; }
         }
       }
     }
-    .subtitle { margin-top: 4%; }
+    .subtitle { margin: 4% 0 0 2%; }
     .description {
       height: 20vh;
       display: flex;
@@ -147,11 +167,20 @@ body, h1, h2, h3, p { margin: 0; }
     height: 24px;
     min-width: 24px;
   }
+  &.medium {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
 }
 
 // Icons
+.primary-stethoscope { @extend .inner-icon; background-image: url('./assets/icons/primary-stethoscope.svg'); }
 .dark-chevron-right { @extend .inner-icon; background-image: url('./assets/icons/dark-chevron-right.svg'); }
 .white-chinese-med { @extend .inner-icon; background-image: url('./assets/icons/white-chinese-med.svg'); }
 .white-orthomolecular { @extend .inner-icon; background-image: url('./assets/icons/white-orthomolecular.svg'); }
 
 //homotoxicology
+
+// Images
+.bamboo-1 { @extend .inner-icon; background-image: url('./assets/img/bamboo-1.svg'); }
