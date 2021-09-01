@@ -7,14 +7,14 @@
   </ngb-carousel>
 </header>
 <section class="container">
-  <div class="main-card">
-    <p class="text">{{ texts.MAIN_DESCRIPTION }}</p>
+  <div class="card-base main-card">
+    <p class="text">{{ content.MAIN_DESCRIPTION }}</p>
     <div class="next icon basic dark-chevron-right"></div>
   </div>
 </section>
 <div class="bamboo-1">
   <section class="container">
-    <h2 class="title">{{ texts.TITLE_SECTION.INTEGRATIVE }}</h2>
+    <h2 class="title">{{ content.TITLE_SECTION.INTEGRATIVE }}</h2>
     <div class="therapies">
       <div class="description-section">
         <div class="icon-bar">
@@ -29,29 +29,52 @@
       </div>
       <div class="image-section"></div>
     </div>
-    <div class="main-card consultation-section">
+    <div class="card-base main-card consultation-section">
       <div class="info icon medium primary-stethoscope"></div>
-      <p class="text">{{ texts.CONSULTATION_DESCRIPTION }}</p>
+      <p class="text">{{ content.CONSULTATION_DESCRIPTION }}</p>
     </div>
   </section>
 </div>
 <div class="background-down">
   <div class="bamboo-2">
     <div class="button-container">
-      <button type="button" class="btn main-button">{{ texts.BUTTONS.CONTACT }}</button>
+      <button type="button" class="btn main-button">{{ content.BUTTONS.CONTACT }}</button>
     </div>
     <section class="container">
       <div class="psychology-section container">
-        <div class="main-card main-avatar">
-          <img src="" alt="">
+        <div class="card-base main-avatar" [ngStyle]="{'background-image': 'url(' + content.PSYCHOLOGY.AVATAR + ')'}">
+          <div class="role-box">
+            <p class="text-strong">{{ content.PSYCHOLOGY.NAME }}</p>
+            <p class="tiny-strong">{{ content.PSYCHOLOGY.ROLE }}</p>
+          </div>
         </div>
         <div class="info-container">
-          <h3 class="subtitle">{{ texts.PSYCHOLOGY.TITLE }}</h3>
-          <p class="text">{{ texts.PSYCHOLOGY.DESCRIPTION }}</p>
+          <h3 class="subtitle">{{ content.PSYCHOLOGY.TITLE }}</h3>
+          <p class="text">{{ content.PSYCHOLOGY.DESCRIPTION }}</p>
           <button class="btn secondary-button">
-            {{ texts.BUTTONS.KNOW_MORE }}
+            {{ content.BUTTONS.KNOW_MORE }}
             <div class="icon basic secondary-chevron-right"></div>
           </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="background-up">
+  <div class="bamboo-3">
+    <section class="container">
+      <h2 class="title">{{ content.TITLE_SECTION.HOLISTIC }}</h2>
+      <div class="therapies-wrapper">
+        <div class="therapie-box" *ngFor="let therapie of therapies">
+          <div class="therapie card-base" [ngStyle]="{'background-image': 'url(' + therapie.AVATAR + ')'}">
+            <button class="role-box with-button">
+              <div>
+                <p class="text-strong">{{ therapie.NAME }}</p>
+                <p class="tiny-strong">{{ therapie.ROLE }}</p>
+              </div>
+              <div class="next icon basic dark-chevron-right"></div>
+            </button>
+          </div>
         </div>
       </div>
     </section>

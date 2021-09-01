@@ -32,6 +32,10 @@ $font-semibold: 'Font semibold';
 $font-bold: 'Font bold';
 
 body, h1, h2, h3, p { margin: 0; }
+button {
+  margin: 0;
+  border: 0;
+}
 
 .body {
   color: $dark;
@@ -61,8 +65,16 @@ body, h1, h2, h3, p { margin: 0; }
   font: 24px $font-regular;
   line-height: 140%;
 }
+.text-strong {
+  font: 24px $font-semibold;
+  line-height: 140%;
+}
 .tiny {
   font: 18px $font-regular;
+  line-height: 120%;
+}
+.tiny-strong {
+  font: 18px $font-bold;
   line-height: 120%;
 }
 
@@ -90,6 +102,54 @@ body, h1, h2, h3, p { margin: 0; }
   justify-content: space-evenly;
 }
 
+// Icons styles
+.icon {
+  &.basic {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+  &.medium {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+}
+
+.card-base {
+  border-radius: 12px;
+  box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.08);
+}
+
+.main-avatar {
+  // TODO
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -30px;
+}
+
+.role-box {
+  left: 8px;
+  bottom: 8px;
+  padding: 3.5% 6%;
+  position: absolute;
+  border-radius: 12px;
+  background-color: $light;
+  .tiny-strong { color: $medium; }
+  &.with-button {
+    left: 0;
+    right: 0;
+    width: 90%;
+    bottom: 8px;
+    margin: auto;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 // Layout
 .header {
   @extend .background-up;
@@ -109,12 +169,11 @@ body, h1, h2, h3, p { margin: 0; }
     text-align: center;
   }
   .main-card {
+    display: flex;
     padding: 4% 6%;
     display: flex;
     background: white;
     align-items: center;  
-    border-radius: 12px;
-    box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.08);
     .next { margin-left: 4%; }
     &.consultation-section {
       margin-top: 6%;
@@ -178,7 +237,7 @@ body, h1, h2, h3, p { margin: 0; }
 
 .psychology-section {
   display: flex;
-  .main-card {
+  .main-avatar {
     width: 45%;
   }
   .info-container {
@@ -192,17 +251,21 @@ body, h1, h2, h3, p { margin: 0; }
   }
 }
 
-// Icons styles
-.icon {
-  &.basic {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-  }
-  &.medium {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
+.therapies-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .therapie-box {
+    width: 24%;
+    height: 320px;
+    margin: 3% 1.5%;
+    .therapie {
+      width: 100%;
+      height: inherit;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -214,6 +277,10 @@ body, h1, h2, h3, p { margin: 0; }
 .bamboo-2 {
   background-size: auto;
   background-position: 105% top;
+}
+.bamboo-3 {
+  background-size: auto;
+  background-position: -6% top;
 }
 
 // Icons
@@ -228,3 +295,4 @@ body, h1, h2, h3, p { margin: 0; }
 // Images
 .bamboo-1 { @extend .inner-icon; background-image: url('./assets/img/bamboo-1.svg'); }
 .bamboo-2 { @extend .inner-icon; background-image: url('./assets/img/bamboo-2.svg'); }
+.bamboo-3 { @extend .inner-icon; background-image: url('./assets/img/bamboo-3.svg'); }

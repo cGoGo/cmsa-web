@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SLIDES, TEXTS } from './data';
+import { CONTENT, SLIDES, THERAPIES } from './data';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import { SLIDES, TEXTS } from './data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public content = CONTENT;
   public slides = SLIDES;
-  public texts = TEXTS;
+  public therapies = THERAPIES;
 }
