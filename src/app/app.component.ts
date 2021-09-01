@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CONTENT, SLIDES, THERAPIES } from './data';
+import { CONTENT, FOOTER, SLIDES, THERAPIES } from './data';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,5 @@ export class AppComponent {
   public content = CONTENT;
   public slides = SLIDES;
   public therapies = THERAPIES;
+  public footer = FOOTER;
 }

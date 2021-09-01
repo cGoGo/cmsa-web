@@ -46,4 +46,28 @@ export const THERAPIES = [
     NAME: 'Julio Vejar',
     ROLE: 'Terapeuta'
   }
-]
+];
+
+export const FOOTER = {
+  INFO: {
+    NAME: 'Centro Médico Ser Alma Ltda.',
+    PHONES: '+569 1234 5678 - 22 1234 1234',
+    ADDRESS: 'Padre Mariano 242, local 103',
+    CITY: 'Providencia, Santiago',
+    STATION: 'Pedro de Valdivia'
+  },
+  NETWORK: {
+    SUBTITLE: 'Síguenos',
+    RRSS: [
+    {
+      ICON: '',
+      LINK: ''
+    },{
+      ICON: '',
+      LINK: ''
+    },{
+      ICON: '',
+      LINK: ''
+    }
+  ]}
+}

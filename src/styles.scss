@@ -21,6 +21,7 @@
   font-style: normal;
 }
 
+// Variables
 $primary: #96D06B;
 $secondary: #46C1ED;
 $secondary-ligther: #9EDBF1;
@@ -31,6 +32,7 @@ $font-regular: 'Font regular';
 $font-semibold: 'Font semibold';
 $font-bold: 'Font bold';
 
+// HTML reset
 body, h1, h2, h3, p { margin: 0; }
 button {
   margin: 0;
@@ -269,6 +271,13 @@ button {
   }
 }
 
+.footer {
+  background-color: $primary;
+  .footer-section {
+    width: 50%;
+  }
+}
+
 // Bamboo
 .bamboo-1 {
   background-size: auto;
@@ -296,3 +305,4 @@ button {
 .bamboo-1 { @extend .inner-icon; background-image: url('./assets/img/bamboo-1.svg'); }
 .bamboo-2 { @extend .inner-icon; background-image: url('./assets/img/bamboo-2.svg'); }
 .bamboo-3 { @extend .inner-icon; background-image: url('./assets/img/bamboo-3.svg'); }
+.bamboo-4 { @extend .inner-icon; background-image: url('./assets/img/bamboo-4.svg'); }
