@@ -32,9 +32,9 @@ export const INTEGRATIVES = [
     IMAGE: 'med-chinese',
     ROUTE: ''
   },{
-    NAME: 'Medicina China y Tibetana',
-    DESCRIPTION: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
-    ICON: 'white-chinese-med',
+    NAME: 'Medicina Ortomolecular',
+    DESCRIPTION: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.',
+    ICON: 'white-orthomolecular',
     IMAGE: 'med-chinese',
     ROUTE: ''
   }
