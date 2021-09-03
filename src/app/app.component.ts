@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CONTENT, FOOTER, SLIDES, THERAPIES } from './data';
+import { CONTENT, FOOTER, INTEGRATIVES, SLIDES, THERAPIES } from './data';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,15 @@ import { CONTENT, FOOTER, SLIDES, THERAPIES } from './data';
 })
 export class AppComponent {
   public content = CONTENT;
+  public footer = FOOTER;
+  public integratives = INTEGRATIVES;
   public slides = SLIDES;
   public therapies = THERAPIES;
-  public footer = FOOTER;
+
+  public index = 0;
+
+  public setIndex(index: number) {
+    this.index = index;
+    return;
+  }
 }

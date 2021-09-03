@@ -24,6 +24,22 @@ export const CONTENT = {
   }
 }
 
+export const INTEGRATIVES = [
+  {
+    NAME: 'Medicina China y Tibetana',
+    DESCRIPTION: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    ICON: 'white-chinese-med',
+    IMAGE: 'med-chinese',
+    ROUTE: ''
+  },{
+    NAME: 'Medicina China y Tibetana',
+    DESCRIPTION: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    ICON: 'white-chinese-med',
+    IMAGE: 'med-chinese',
+    ROUTE: ''
+  }
+]
+
 export const THERAPIES = [
   {
     AVATAR: '/assets/img/img-psichology.png',

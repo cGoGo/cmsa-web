@@ -18,16 +18,16 @@
     <div class="therapies">
       <div class="description-section">
         <div class="icon-bar">
-          <div class="bullet full white-chinese-med"></div>
-          <div class="bullet"></div>
-          <div class="bullet"></div>
-          <div class="bullet"></div>
-          <div class="bullet"></div>
+          <div *ngFor="let integrative of integratives; index as i">
+            <div class="bullet" [ngClass]="{ 'full': index === i }" (click)="setIndex(i)">
+              <div class="icon" [ngClass]="integrative.ICON"></div>
+            </div>
+          </div>
         </div>
         <h3 class="subtitle">Medicina China y Tibetana</h3>
         <p class="description tiny">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
       </div>
-      <div class="image-section"></div>
+      <div class="image-section med-chinese"></div>
     </div>
     <div class="card-base main-card consultation-section">
       <div class="info icon medium primary-stethoscope"></div>

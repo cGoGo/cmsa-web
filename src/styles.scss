@@ -83,7 +83,7 @@ a, a:hover {
   line-height: 120%;
 }
 .tiny-strong {
-  font: 18px $font-bold;
+  font: 18px $font-semibold;
   line-height: 120%;
 }
 
@@ -210,7 +210,7 @@ a, a:hover {
     .icon-bar {
       padding: 0 4%;
       display: flex;
-      margin-top: 32px;
+      margin: 32px 0;
       align-items: center;
       justify-content: space-evenly;
       border-top: 2px solid $secondary-soft;
@@ -218,17 +218,23 @@ a, a:hover {
         width: 32px;
         height: 32px;
         cursor: pointer;
-        margin-top: -32px;
+        margin-top: -18px;
         border-radius: 50%;
         background-color: $secondary-soft;
+        &:hover { @extend .hover; }
         &.full {
-          width: 64px;
-          height: 64px;
-          max-width: 64px;
+          display: flex;
           cursor: initial;
-          background-size: 44px;
+          align-items: center;
+          transform: scale(2,2);
+          justify-content: center;
           background-color: $secondary;
           filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+          &:hover { box-shadow: none; }
+          .icon {
+            width: 24px;
+            height: 24px;
+          }
         }
       }
     }
@@ -246,6 +252,7 @@ a, a:hover {
     width: 45%;
     min-height: 100%;
     border-radius: 24px;
+    background-size: cover;
     box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.08);
   }
 }
@@ -346,7 +353,8 @@ a, a:hover {
 .dark-youtube { @extend .inner-icon; background-image: url('./assets/icons/dark-youtube.svg'); }
 
 
-//homotoxicology
+// Integrative
+.med-chinese { @extend .inner-icon; background-image: url('./assets/img/med-chinese.png'); }
 
 // Images
 .bamboo-1 { @extend .inner-icon; background-image: url('./assets/img/bamboo-1.svg'); }
