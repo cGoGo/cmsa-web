@@ -39,15 +39,14 @@ button {
   margin: 0;
   border: 0;
 }
+a, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
 
 .body {
   color: $dark;
   background-color: $light;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 // Utils
@@ -58,6 +57,8 @@ a {
 }
 .background-up {   background: linear-gradient(177.95deg, rgba(150, 208, 107, 0.2) 1.84%, rgba(150, 208, 107, 0.145313) 53.11%, rgba(248, 251, 246, 0.06) 98.41%); }
 .background-down { background: linear-gradient(359.43deg, rgba(150, 208, 107, 0.2) 0.48%, rgba(150, 208, 107, 0.145313) 53.04%, rgba(248, 251, 246, 0.06) 99.49%); }
+
+.hover { box-shadow: 0px 2px 18px rgba(21, 40, 7, 0.3); }
 
 // Bootstrap
 .carousel-indicators li { background-color:$medium; }
@@ -95,6 +96,7 @@ a {
   border-radius: 12px;
   font: 32px $font-semibold;
   background-color: $primary;
+  &:hover { @extend .hover; }
 }
 .secondary-button {
   width: 100%;
@@ -108,6 +110,10 @@ a {
   background-color: white;
   border: 2px solid $secondary;
   justify-content: space-evenly;
+  &:hover {
+    @extend .hover;
+    color: $secondary;
+  }
 }
 
 // Icons styles
@@ -130,6 +136,7 @@ a {
 }
 
 .card-base {
+  display: block;
   border-radius: 12px;
   box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.08);
 }
@@ -145,8 +152,8 @@ a {
 .role-box {
   left: 8px;
   bottom: 8px;
-  padding: 3.5% 6%;
   position: absolute;
+  padding: 16px 24px;
   border-radius: 12px;
   background-color: $light;
   .tiny-strong { color: $medium; }
@@ -160,6 +167,7 @@ a {
     text-align: left;
     align-items: center;
     justify-content: space-between;
+    &:hover { @extend .hover; }
   }
 }
 
@@ -184,10 +192,10 @@ a {
   .main-card {
     display: flex;
     padding: 4% 6%;
-    display: flex;
     background: white;
     align-items: center;  
     .next { margin-left: 4%; }
+    &.main-info:hover { @extend .hover; }
     &.consultation-section {
       margin-top: 6%;
       .info { margin-right: 2%; }
@@ -287,7 +295,8 @@ a {
     padding: 8% 0;
     justify-content: center;
     .footer-section {
-      width: 40%;
+      width: 30%;
+      margin-left: 8%;
       .footer-item {
         margin: 2% 0;
         display: flex;
@@ -296,7 +305,11 @@ a {
       }
       .rrss-box {
         display: flex;
-        .icon { margin-right: 16px; }
+        .icon {
+          margin-right: 16px;
+          border-radius: 50%;
+          &:hover { @extend .hover; }
+        }
       }
     }
   }

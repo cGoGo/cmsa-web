@@ -7,10 +7,10 @@
   </ngb-carousel>
 </header>
 <section class="container">
-  <div class="card-base main-card">
+  <a class="card-base main-card main-info" href="#">
     <p class="text">{{ content.MAIN_DESCRIPTION }}</p>
     <div class="next icon basic dark-chevron-right"></div>
-  </div>
+  </a>
 </section>
 <div class="bamboo-1">
   <section class="container">
@@ -83,7 +83,7 @@
 <footer class="footer">
   <div class="footer-inner bamboo-4">
     <div class="footer-section">
-      <p class="text-strong">{{ footer.INFO.NAME }}</p>
+      <p class="footer-item text-strong">{{ footer.INFO.NAME }}</p>
       <p class="footer-item tiny">{{ footer.INFO.PHONES }}</p>
       <p class="footer-item tiny">
         <a href="https://goo.gl/maps/EeaxWFgcyXX3dfsi9" target="_blank">{{ footer.INFO.ADDRESS }}</a>
@@ -95,7 +95,7 @@
       </div>
     </div>
     <div class="footer-section">
-      <p class="text-strong">{{ footer.NETWORK.SUBTITLE }}</p>
+      <p class="footer-item text-strong">{{ footer.NETWORK.SUBTITLE }}</p>
       <div class="rrss-box">
         <a *ngFor="let rrss of footer.NETWORK.RRSS" [href]="rrss.LINK" target="_blank">
           <div class="icon large" [ngClass]="rrss.ICON"></div>
