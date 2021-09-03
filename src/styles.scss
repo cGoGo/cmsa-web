@@ -23,8 +23,9 @@
 
 // Variables
 $primary: #96D06B;
+$primary-soft: #D7ECC7;
 $secondary: #46C1ED;
-$secondary-ligther: #9EDBF1;
+$secondary-soft: #9EDBF1;
 $medium: #8C9089;
 $dark: #152807;
 $light: #F8FBF6;
@@ -42,6 +43,11 @@ button {
 .body {
   color: $dark;
   background-color: $light;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 // Utils
@@ -115,6 +121,11 @@ button {
     width: 48px;
     height: 48px;
     min-width: 48px;
+  }
+  &.large {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
   }
 }
 
@@ -194,14 +205,14 @@ button {
       margin-top: 32px;
       align-items: center;
       justify-content: space-evenly;
-      border-top: 2px solid $secondary-ligther;
+      border-top: 2px solid $secondary-soft;
       .bullet {
         width: 32px;
         height: 32px;
         cursor: pointer;
         margin-top: -32px;
         border-radius: 50%;
-        background-color: $secondary-ligther;
+        background-color: $secondary-soft;
         &.full {
           width: 64px;
           height: 64px;
@@ -239,9 +250,7 @@ button {
 
 .psychology-section {
   display: flex;
-  .main-avatar {
-    width: 45%;
-  }
+  .main-avatar { width: 45%; }
   .info-container {
     width: 55%;
     display: flex;
@@ -272,9 +281,24 @@ button {
 }
 
 .footer {
-  background-color: $primary;
-  .footer-section {
-    width: 50%;
+  background-color: $primary-soft;
+  .footer-inner {
+    display: flex;
+    padding: 8% 0;
+    justify-content: center;
+    .footer-section {
+      width: 40%;
+      .footer-item {
+        margin: 2% 0;
+        display: flex;
+        align-items: center;
+        .icon { margin-right: 8px; }
+      }
+      .rrss-box {
+        display: flex;
+        .icon { margin-right: 16px; }
+      }
+    }
   }
 }
 
@@ -291,6 +315,10 @@ button {
   background-size: auto;
   background-position: -6% top;
 }
+.bamboo-4 {
+  background-size: auto;
+  background-position: 98% bottom;
+}
 
 // Icons
 .dark-chevron-right { @extend .inner-icon; background-image: url('./assets/icons/dark-chevron-right.svg'); }
@@ -298,6 +326,12 @@ button {
 .secondary-chevron-right { @extend .inner-icon; background-image: url('./assets/icons/secondary-chevron-right.svg'); }
 .white-chinese-med { @extend .inner-icon; background-image: url('./assets/icons/white-chinese-med.svg'); }
 .white-orthomolecular { @extend .inner-icon; background-image: url('./assets/icons/white-orthomolecular.svg'); }
+
+.dark-metro { @extend .inner-icon; background-image: url('./assets/icons/dark-metro.svg'); }
+.dark-facebook { @extend .inner-icon; background-image: url('./assets/icons/dark-facebook.svg'); }
+.dark-instagram { @extend .inner-icon; background-image: url('./assets/icons/dark-instagram.svg'); }
+.dark-youtube { @extend .inner-icon; background-image: url('./assets/icons/dark-youtube.svg'); }
+
 
 //homotoxicology
 

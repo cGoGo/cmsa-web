@@ -60,14 +60,14 @@ export const FOOTER = {
     SUBTITLE: 'Síguenos',
     RRSS: [
     {
-      ICON: '',
-      LINK: ''
+      ICON: 'dark-facebook',
+      LINK: 'https://www.facebook.com/CMSerAlma'
     },{
-      ICON: '',
-      LINK: ''
+      ICON: 'dark-instagram',
+      LINK: 'https://www.instagram.com/cmseralma'
     },{
-      ICON: '',
-      LINK: ''
+      ICON: 'dark-youtube',
+      LINK: 'https://www.youtube.com/channel/UCX0Ve0Q6Ru_9X3wEYwEabTg'
     }
   ]}
 }

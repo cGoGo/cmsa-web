@@ -81,18 +81,25 @@
   </div>
 </div>
 <footer class="footer">
-  <div class="bamboo-4">
+  <div class="footer-inner bamboo-4">
     <div class="footer-section">
-      <p>{{ footer.INFO.NAME }}</p>
-      <p>{{ footer.INFO.PHONES }}</p>
-      <p>{{ footer.INFO.ADDRESS }}</p>
-      <p>{{ footer.INFO.CITY }}</p>
-      <p>{{ footer.INFO.STATION }}</p>
+      <p class="text-strong">{{ footer.INFO.NAME }}</p>
+      <p class="footer-item tiny">{{ footer.INFO.PHONES }}</p>
+      <p class="footer-item tiny">
+        <a href="https://goo.gl/maps/EeaxWFgcyXX3dfsi9" target="_blank">{{ footer.INFO.ADDRESS }}</a>
+      </p>
+      <p class="footer-item tiny">{{ footer.INFO.CITY }}</p>
+      <div class="footer-item">
+        <div class="icon basic dark-metro"></div>
+        <p class="tiny">{{ footer.INFO.STATION }}</p>
+      </div>
     </div>
     <div class="footer-section">
-      <p>{{ footer.NETWORK.SUBTITLE }}</p>
-      <div *ngFor="let rrss of footer.NETWORK.RRSS">
-        <button class="icon"></button>
+      <p class="text-strong">{{ footer.NETWORK.SUBTITLE }}</p>
+      <div class="rrss-box">
+        <a *ngFor="let rrss of footer.NETWORK.RRSS" [href]="rrss.LINK" target="_blank">
+          <div class="icon large" [ngClass]="rrss.ICON"></div>
+        </a>
       </div>
     </div>
   </div>
